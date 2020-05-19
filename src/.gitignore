@@ -1,0 +1,6 @@
+.env 
+Input
+Output
+.ipynb_checkpoints
+__pycache__
+:gitignore

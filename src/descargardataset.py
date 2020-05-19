@@ -11,8 +11,8 @@ def descargarDataset(path2):
     imagenes_fruta = []
     clase = [] 
     for directorio in glob.glob(path2):
-        nombre = directorio.split("/")[-2]
-        for imagen_archivo in glob.glob(os.path.join(directorio, "*.jpg")):
+        nombre = directorio.split("/")[-1]
+        for imagen_archivo in glob.glob(os.path.join(directorio, "*.*g")):
             imagen = cv2.imread(imagen_archivo, cv2.IMREAD_COLOR)
         
             imagen = cv2.resize(imagen, (35,35))
