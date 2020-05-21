@@ -1,7 +1,23 @@
+import cv2
+from gtts import gTTS
+from tensorflow.keras.models import load_model
+#import tensorflow.keras
+import numpy as np
+import pandas as pd
+from googletrans import Translator
+from pygame import mixer
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import pygame
+
+
+
+
+
 def comprobarImagen(path):
   
     imagen = cv2.imread(path, cv2.IMREAD_COLOR)#cargo la imagen
-    new_model = load_model('./Input/modelos/path_to_my_modelPrimero3Parte.h5' ,custom_objects=None,compile=False)#cargo el modelo  estudiado
+    new_model = load_model('./Input/modelos/path_to_my_modelTesteado.h5' ,custom_objects=None,compile=False)#cargo el modelo  estudiado
    
     imagenes = cv2.resize(imagen, (35,35))# Reduzco la imagena 35x35
     imagenes = cv2.cvtColor(imagenes, cv2.COLOR_RGB2BGR)
@@ -28,3 +44,4 @@ def comprobarImagen(path):
     mixer.music.play()
     plt.imshow(imagen)
     plt.xlabel(result.text)
+    return 
