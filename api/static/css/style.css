@@ -1,0 +1,48 @@
+html {
+    font-size: 62.5%;/**Reset para REMS -62.5% = 10px de 16px **/
+}
+
+/** Globales**/
+h1 {    
+    text-align:center;
+    font-size: 3.8rem;
+    color: black;  
+}
+h3 {
+    text-align:center;
+    color: purple;
+}
+label{
+    font-size: 2,7rem;
+    color: Black;
+
+}
+/** Header **/
+.fondos{
+    background-image:url(http://www.gustafruta.com/web/images/individual/grande/mandarina.png); 
+    background-size: auto;
+    opacity: 0.9;
+    height: 120vh; 
+    min-height: 60rem; /** =600px**/    
+}
+
+.colocacion{
+   margin: 23%;
+   font-size: 2.5rem;
+}
+.colocacion2{
+    margin: 3%;
+    font-size: 2.5rem;
+ }
+/** HEADER PAGINA PRINCIPAL**/
+ .imagenprincipal{ 
+     
+    background-image:url("https://libbys.es/wordpress/wp-content/uploads/2018/10/estadosfruta.jpg"); 
+    background-size: cover;
+    height: 100h; 
+    min-height: 90rem; /** =600px**/  
+ }
+
+ 
+ 
+

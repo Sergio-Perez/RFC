@@ -1,28 +1,39 @@
+
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 
-<div class="container">
-  <div class="row">
-    <div class="col">
+  <title>RFC</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">  
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
-      <h1>Sube una imagen</h1>
-      <hr>
+    <div class="fondos">    
+             
+      <h1>Sube una imagen</h1>          
+  
+         <form action="/cargar-imagen"  method="post" enctype="multipart/form-data" >
+  
+          <div class="colocacion ">
+              <label>Selecciona una imagen</label>
+              
+                <input type="file" class="custom-file-input" name="image" id="image">
 
-      <form action="/cargar-imagen"  method="post" enctype="multipart/form-data" >
-
-        <div class="form-group">
-          <label>Selecciona una imagen</label>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" name="image" id="image">
-            <label class="custom-file-label" for="image">Selecciona una  imagen...</label>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Enviar datos</button>
-
-      </form>
-
+          <div class="colocacion2">
+          <label class="custom-file-label" for="image">Selecciona una  imagen...</label>  
+          <button type="submit" class="btn btn-primary">Enviar datos</button>
+         </div>
+        </form>
+  
+      
     </div>
   </div>
-</div>
-
-
+  
+</head>
+<body>
+  
+</body>
+</html>

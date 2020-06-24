@@ -1,1 +1,2 @@
-python3 -u  api.py
+#!/bin/bash 
+python3 -m api.py

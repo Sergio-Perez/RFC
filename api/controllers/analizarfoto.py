@@ -7,6 +7,7 @@ import os
 from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from api.config import pathImagen
+from flask import render_template_string
 
 
 
@@ -40,7 +41,7 @@ def capturarImagen():
             break
         elif k%256 == 32:
             # Presionar SPACE 
-            img_name = "./static/opencv_frame_{}.jpg".format(img_counter)
+            img_name = "./static/img/opencv_frame_{}.jpg".format(img_counter)
             cv2.imwrite(img_name, frame)
             print("{} written!".format(img_name))
             img_counter += 1
@@ -50,10 +51,10 @@ def capturarImagen():
         if img_name == None:
           raise APIError("Fallo al  grabar imagen") #"""<img src ="https://image.freepik.com/vector-gratis/nino-buscando-linterna_7710-126.jpg" />"""
         else :
-          img_name = "./static/opencv_frame_0.jpg"
+          img_name = "./static/img/opencv_frame_0.jpg"
              
           comprobarImagen.comprobarImagen(img_name)
-          return   """  <img src="/static/opencv_frame_0.jpg" />
+          return   """  <img src="/static/img/opencv_frame_0.jpg" />
           <h1>Fruta</h1>"""
 
 
@@ -62,10 +63,8 @@ def capturarImagen():
 @app.route("/")
 @errorHandler
 def fotoInicio():
-    return """
-     <img src="https://static.hoy.es/jaraizdelavera/multimedia/202004/09/media/jaraizdelavera.agricultores.jpg" />
-     """
-
+     return render_template_string(open("api/controllers/template/pagina-inicio.html",'r').read())
+    
 
 
 @app.route("/comprobar/imagen-guardada")
@@ -75,7 +74,7 @@ def analizarImagen():
   try:
     comprobarImagen.comprobarImagen(pathImagen)
     return """
-  <img src="/static/fruta.jpg" />
+  <img src="/static/img/fruta.jpg" />
   <h1>  Fruta </h1>
   """
   except:
