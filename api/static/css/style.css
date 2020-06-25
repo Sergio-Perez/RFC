@@ -5,7 +5,7 @@ html {
 /** Globales**/
 h1 {    
     text-align:center;
-    font-size: 3.8rem;
+    font-size: 9rem;
     color: black;  
 }
 h3 {
@@ -36,13 +36,18 @@ label{
  }
 /** HEADER PAGINA PRINCIPAL**/
  .imagenprincipal{ 
-     
-    background-image:url("https://libbys.es/wordpress/wp-content/uploads/2018/10/estadosfruta.jpg"); 
+    overflow: scroll;
+    background-image:url(https://image.freepik.com/foto-gratis/grupo-verduras-frutas-frescas_135427-235.jpg); 
     background-size: cover;
     height: 100h; 
     min-height: 90rem; /** =600px**/  
  }
 
- 
+ .url{
+    text-align:center;
+    color: purple;
+    font-size: 2rem;
+
+ }
  
 
